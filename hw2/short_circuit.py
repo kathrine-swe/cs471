@@ -6,14 +6,16 @@ Programming2 - Short Circuit Evaluation
 """
 
 def test_short_circuit():
-    print("I have been evaluated.")
+    print("No Short Circuit.")
     return True
 
 def main():
-    i = True
+    print("Begin test for Python")
 
-    if i == False and test_short_circuit():
+    if False and test_short_circuit():
         pass
+
+    print("End test for Python")
 
 if __name__ == '__main__':
     main() 
