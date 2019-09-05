@@ -6,16 +6,22 @@ Programming2 - Short Circuit Evaluation
 """
 
 def test_short_circuit():
-    print("No Short Circuit.")
+    """ Helper Function
+
+    If contents get printed, then short circuiting does not happen
+    Else short circuiting occurs
+    """
+    print("I just got executed.")
     return True
 
 def main():
-    print("Begin test for Python")
-
+    print("Start short circuit test...")
     if False and test_short_circuit():
         pass
+    print("...End short circuit test")
 
-    print("End test for Python")
+    print("Helper function never prints")
+    print("Short circuiting is used in Python")
 
 if __name__ == '__main__':
     main() 

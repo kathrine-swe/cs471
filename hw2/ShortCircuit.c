@@ -18,7 +18,7 @@ int main()
     printf("End short circuit test...\n");
 
     printf("Helper function never prints\n");
-    printf("Short circuiting is used in Java\n");
+    printf("Short circuiting is used in C\n");
 }// end main
 
 int test_short_circuit()
