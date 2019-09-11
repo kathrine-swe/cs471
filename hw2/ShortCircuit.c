@@ -2,7 +2,14 @@
  *  CS 471 - S. Cooper
  *  Programming2 - Short Circuit
  *
- *  Tests whether or not C includes short circuiting
+ *  Demonstrate whether the C programming language utilizes the concept of
+ *  short circuiting.
+ *
+ *  Short circuiting occurs when only part of an expression needs to be
+ *  evaluated before finding the value.
+ *  See the following logical rules:
+ *      if a and b and not a then false
+ *      if a or  b and a     then true
  */
 #include <stdio.h>
 
@@ -10,12 +17,16 @@ int test_short_circuit();
 
 int main()
 {
-    int x = 1;
 
-    printf("Start short circuit test...\n");
-    if( 0 && test_short_circuit() )
+    printf("Start short circuit test AND...\n");
+    if( 0 && test_short_circuit() ) // first condition fails
         ;
     printf("End short circuit test...\n");
+
+    printf("Start short circuit test OR...\n");
+    if( 1 || test_short_circuit() ) // first condition passes
+        ;
+    printf("...End short circuit test\n");
 
     printf("Helper function never prints\n");
     printf("Short circuiting is used in C\n");
