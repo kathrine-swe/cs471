@@ -1,27 +1,29 @@
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-int main()
+    
+int main(int argc, char *argv[])
 {
+    // Set rand
+    srand((unsigned int)time(NULL));
 
-    // declare variables
-    static int SIZE = 1000;
-    int m1[SIZE][SIZE], m2[SIZE][SIZE], m3[SIZE][SIZE];
-    int i, j, k, sum;
+    // Declare variables
+    const int SIZE = atoi(argv[1]);
+    float m1[SIZE][SIZE], m2[SIZE][SIZE], m3[SIZE][SIZE], sum;
+    int i, j, k;
 
-    // fill matrices m1, m2
+    // Fill matrices m1, m2
     for(i = 0; i < SIZE; i++){
         for(j = 0; j < SIZE; j++){
-            m1[i][j] = 1;
-            m2[i][j] = 2;
+            m1[i][j] = rand() / (float) RAND_MAX;
+            m2[i][j] = rand() / (float) RAND_MAX;
         }
     }// end fill matrix
 
-    // multiply matrices m1 and m2
-    // store result in m3
+    // Multiply matrices m1 and m2 and store result in m3
     for(i = 0; i < SIZE; i++){
         for(j = 0; j < SIZE; j++){
-            for(k = 0; k < 5; k++){
+            for(k = 0; k < SIZE; k++){
                 sum = sum + m1[i][k] * m2[k][j];
             }
 
