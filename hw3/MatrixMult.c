@@ -1,3 +1,19 @@
+/*
+ * K. Sweebe
+ * CS471 - S. Cooper
+ * Programming 3 - Compiled and Interpreted Code
+ *
+ * Purpose of Program:
+ *  The following program takes a CLI argument SIZE that gives the size of an
+ *  NxN matrix. Then two matrices are filled with random floating point
+ *  numbers between 0 and 1. These two matrices are then multiplied and the
+ *  result is stored in a third matrix.
+ *
+ * Purpose of Assignment:
+ *  To see how long it takes to run through various sizes of data processing
+ *  for a compiled language like C for comparison to an interpreted language
+ *  like Python.
+*/
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
